@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>送信完了 | U25 AI×3D PERSPECTIVE AWARD 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --black: #111; --gray: #666; --light: #999;
+      --border: #e0e0e0; --bg: #fafaf8; --white: #fff;
+      --accent: #2a5a3f;
+    }
+    body {
+      background: var(--bg); color: var(--black);
+      font-family: 'Noto Sans JP', sans-serif;
+      -webkit-font-smoothing: antialiased; line-height: 1.8;
+      min-height: 100vh; display: flex; flex-direction: column;
+    }
+    .en { font-family: 'Inter', sans-serif; }
+    nav {
+      padding: 20px 40px; display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.15em; color: var(--black); text-decoration: none; text-transform: uppercase; }
+
+    main {
+      flex: 1; display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center; padding: 64px 24px;
+    }
+
+    .check-icon {
+      width: 64px; height: 64px; border: 2px solid var(--black);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      margin-bottom: 32px;
+      animation: fadeIn 0.6s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    h1 { font-size: 24px; font-weight: 700; letter-spacing: 0.06em; margin-bottom: 16px; }
+    .message { font-size: 15px; color: var(--gray); letter-spacing: 0.04em; max-width: 480px; margin-bottom: 48px; }
+    .btn-back {
+      display: inline-block; padding: 14px 48px;
+      background: var(--black); color: var(--white);
+      font-family: 'Inter', sans-serif; font-weight: 600;
+      font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+      text-decoration: none; transition: all 0.3s;
+    }
+    .btn-back:hover { background: var(--accent); }
+
+    footer { border-top: 1px solid var(--border); padding: 24px; text-align: center; }
+    footer p { font-size: 11px; color: var(--light); letter-spacing: 0.06em; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">U25 AI×3D Award</a>
+</nav>
+
+<main>
+  <div class="check-icon">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"/>
+    </svg>
+  </div>
+
+  <h1 id="title">送信が完了しました</h1>
+  <p class="message" id="message">
+    エントリーを受け付けました。<br>
+    ご登録いただいたメールアドレス宛に確認のご連絡をお送りします。<br>
+    応募締切は 2026年5月2日（土）23:59 JST です。
+  </p>
+
+  <a href="index.html" class="btn-back">Back to Top</a>
+</main>
+
+<footer>
+  <p>&copy; 2026 U25 AI×3D Perspective Award. All Rights Reserved.</p>
+</footer>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('type') === 'sponsor') {
+    document.getElementById('title').textContent = 'お問い合わせを受け付けました';
+    document.getElementById('message').innerHTML =
+      '協賛に関するお問い合わせありがとうございます。<br>' +
+      '担当者より2〜3営業日以内にご連絡いたします。';
+  }
+</script>
+
+</body>
+</html>

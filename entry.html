@@ -5,31 +5,269 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <title>ENTRY | U25 AI×3D PERSPECTIVE AWARD 2026</title>
-  <meta http-equiv="refresh" content="0; url=https://docs.google.com/forms/d/e/1FAIpQLSdNjDrPH-CTsuLzoVIkDL965WmLuCZPF3haMLQKglgtsdBk3Q/viewform">
-  <link rel="canonical" href="https://docs.google.com/forms/d/e/1FAIpQLSdNjDrPH-CTsuLzoVIkDL965WmLuCZPF3haMLQKglgtsdBk3Q/viewform">
-  <script>
-    window.location.replace("https://docs.google.com/forms/d/e/1FAIpQLSdNjDrPH-CTsuLzoVIkDL965WmLuCZPF3haMLQKglgtsdBk3Q/viewform");
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --black: #0a0a0f;
+      --dark: #12121a;
+      --gray: #666;
+      --light: #999;
+      --border: #e0e0e0;
+      --bg: #fafafa;
+      --white: #fff;
+      --accent: #d4e600;
+      --accent-light: #e6ff00;
+      --accent-glow: rgba(230, 255, 0, 0.2);
+    }
     body {
-      background: #fafaf8;
-      color: #111;
-      font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--black);
+      font-family: 'Noto Sans JP', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.8;
+      min-height: 100vh;
       display: flex;
+      flex-direction: column;
+    }
+    .en { font-family: 'Inter', sans-serif; }
+
+    nav {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      color: var(--black);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    nav a.back {
+      font-size: 12px;
+      color: var(--gray);
+      text-decoration: none;
+    }
+    nav a.back:hover { color: var(--black); }
+
+    main {
+      flex: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 24px 64px;
+      width: 100%;
+    }
+
+    .eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      line-height: 1.3;
+      margin-bottom: 24px;
+      color: var(--black);
+    }
+    .lead {
+      font-size: 15px;
+      color: var(--gray);
+      line-height: 2;
+      margin-bottom: 40px;
+    }
+
+    .info-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 32px;
+    }
+    .info-card h2 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--dark);
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 4px;
+      margin-bottom: 18px;
+    }
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .info-table th {
+      width: 100px;
+      text-align: left;
+      vertical-align: top;
+      padding: 10px 16px 10px 0;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--black);
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .info-table td {
+      padding: 10px 0;
+      font-size: 13px;
+      color: var(--gray);
+      border-bottom: 1px solid #f0f0f0;
+      line-height: 1.7;
+    }
+    .info-table tr:last-child th,
+    .info-table tr:last-child td { border-bottom: none; }
+
+    .deadline-notice {
+      background: #fff8d6;
+      border-left: 4px solid #d4a300;
+      padding: 18px 22px;
+      border-radius: 6px;
+      margin-bottom: 32px;
+    }
+    .deadline-notice strong {
+      display: block;
+      font-size: 13px;
+      color: #8a6a00;
+      margin-bottom: 6px;
+      letter-spacing: 0.04em;
+    }
+    .deadline-notice p {
+      font-size: 13px;
+      color: #5a4500;
+      line-height: 1.7;
+    }
+
+    .cta-btn {
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-      text-align: center;
-      padding: 24px;
+      gap: 10px;
+      padding: 18px 48px;
+      background: var(--dark);
+      color: var(--accent);
+      border: 1px solid var(--dark);
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: all 0.3s;
     }
-    a { color: #2a5a3f; }
+    .cta-btn:hover {
+      background: var(--black);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      transform: translateY(-1px);
+    }
+    .cta-wrap {
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .notes {
+      margin-top: 40px;
+      font-size: 12px;
+      color: var(--light);
+      line-height: 1.9;
+    }
+    .notes ul {
+      padding-left: 18px;
+      margin-top: 8px;
+    }
+
+    footer {
+      background: var(--dark);
+      color: rgba(255, 255, 255, 0.4);
+      padding: 24px 40px;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      main { padding: 48px 20px; }
+      h1 { font-size: 26px; }
+      .info-card { padding: 24px 20px; }
+      .info-table th { width: 80px; font-size: 11px; }
+      .info-table td { font-size: 12px; }
+      .cta-btn { padding: 16px 32px; font-size: 12px; width: 100%; }
+    }
   </style>
 </head>
 <body>
-  <div>
-    <p>エントリーフォームへ移動しています…</p>
-    <p>自動で移動しない場合は <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNjDrPH-CTsuLzoVIkDL965WmLuCZPF3haMLQKglgtsdBk3Q/viewform">こちら</a> をクリックしてください。</p>
-  </div>
+  <nav>
+    <a href="index.html" class="nav-logo">U25 AI×3D Award</a>
+    <a href="index.html" class="back">← トップへ戻る</a>
+  </nav>
+
+  <main>
+    <p class="eyebrow">Competition Entry</p>
+    <h1>U25 AI×3D PERSPECTIVE AWARD<br>応募エントリー</h1>
+    <p class="lead">
+      U-25のクリエイターによる、AI × 3Dパースの次世代オフィスコンペティションへのエントリーを受け付けています。あなたが描く「働きたいオフィス」を見せてください。
+    </p>
+
+    <div class="info-card">
+      <h2>Entry Info</h2>
+      <table class="info-table">
+        <tr>
+          <th>応募資格</th>
+          <td>25歳以下（2026年5月2日時点）／ パース制作ができる方<br>個人またはチーム（最大3名・全員25歳以下）</td>
+        </tr>
+        <tr>
+          <th>提出物</th>
+          <td>3Dパース 4カット以内 ＋ 平面図1枚 ／ プロセスシート1枚</td>
+        </tr>
+        <tr>
+          <th>参加費</th>
+          <td>無料</td>
+        </tr>
+        <tr>
+          <th>賞金総額</th>
+          <td>150万円（最優秀賞 100万円 ／ 優秀賞 各15万円 ／ 審査員特別賞 各5万円）</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="deadline-notice">
+      <strong>⚠ 応募締切</strong>
+      <p>エントリーの応募期限は <strong>2026年5月2日（土）23:59 JST</strong> までです。締切後の応募は受け付けません。締切までであれば、作品の差し替え・更新が可能です。</p>
+    </div>
+
+    <div class="cta-wrap">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNjDrPH-CTsuLzoVIkDL965WmLuCZPF3haMLQKglgtsdBk3Q/viewform" target="_blank" rel="noopener" class="cta-btn">
+        エントリーフォームへ →
+      </a>
+    </div>
+
+    <div class="notes">
+      <p><strong>応募にあたっての注意事項</strong></p>
+      <ul>
+        <li>5月10日（日）の最終公開審査会（都内会場）にオフライン参加できることが必須条件です。参加できない方は審査の対象外となります。</li>
+        <li>会場までの交通費・宿泊費等の補助は一切行いません。</li>
+        <li>1次審査を経て、ファイナリスト計6組を選出します（5月6日発表）。</li>
+        <li>応募作品の著作権は応募者に帰属します。詳細は <a href="terms.html" style="color:var(--gray); text-decoration:underline;">応募規約</a> をご確認ください。</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 U25 AI×3D Perspective Award / 運営事務局: murayama.dai.1@gmail.com
+  </footer>
 </body>
 </html>

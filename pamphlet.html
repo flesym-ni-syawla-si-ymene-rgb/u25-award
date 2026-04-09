@@ -38,6 +38,9 @@
       position: relative; overflow: hidden;
       page-break-after: always;
     }
+    .page:last-child {
+      page-break-after: auto;
+    }
 
     .page-front {
       background: var(--dark);
@@ -47,7 +50,8 @@
 
     /* Hero area */
     .front-hero {
-      flex: 1;
+      flex: 1 1 0;
+      min-height: 0;
       position: relative;
       display: flex; flex-direction: column;
       justify-content: center;
@@ -101,6 +105,7 @@
     /* Bottom info bar */
     .front-bottom {
       position: relative; z-index: 1;
+      flex-shrink: 0;
       background: rgba(0,0,0,0.5);
       backdrop-filter: blur(8px);
       padding: 16px 48px;
@@ -134,6 +139,7 @@
     /* Front overview (dark) */
     .front-overview {
       position: relative; z-index: 1;
+      flex-shrink: 0;
       background: rgba(0,0,0,0.6);
       padding: 14px 48px 18px;
       border-top: 1px solid rgba(255,255,255,0.08);
@@ -169,6 +175,7 @@
 
     /* Accent stripe */
     .accent-stripe {
+      flex-shrink: 0;
       background: var(--accent);
       color: var(--black);
       padding: 10px 48px;

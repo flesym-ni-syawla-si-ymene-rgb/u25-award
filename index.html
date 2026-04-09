@@ -162,6 +162,12 @@
       color: var(--white);
     }
 
+    .nav-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
     .nav-entry {
       display: inline-flex;
       align-items: center;
@@ -181,6 +187,29 @@
 
     .nav-entry:hover {
       background: var(--accent-light);
+      box-shadow: 0 4px 20px var(--accent-glow);
+    }
+
+    .nav-audience {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 22px;
+      height: 38px;
+      background: transparent;
+      color: var(--accent);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      text-transform: uppercase;
+      border: 1px solid var(--accent);
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+
+    .nav-audience:hover {
+      background: rgba(212, 230, 0, 0.1);
       box-shadow: 0 4px 20px var(--accent-glow);
     }
 
@@ -1574,7 +1603,11 @@
         <a href="#faq">よくある質問</a>
       </div>
     </div>
-    <a href="entry.html" class="nav-entry">Entry</a>
+    <div class="nav-actions">
+      <a href="audience.html" class="nav-audience">Audience</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNjDrPH-CTsuLzoVIkDL965WmLuCZPF3haMLQKglgtsdBk3Q/viewform"
+        target="_blank" rel="noopener" class="nav-entry">Entry</a>
+    </div>
   </nav>
 
   <!-- ============================== -->
@@ -1594,8 +1627,10 @@
       U-25のクリエイターに向けた、次世代オフィスコンペティション。<br class="pc-br">
       AIと共創する未来、私たちが心から「働きたい」空間とは？
     </p>
-    <a href="entry.html" class="hero-cta reveal">Entry Now</a>
-    <p class="hero-note reveal">応募条件：パース制作ができること / 25歳以下であること（学生・社会人不問）/ 5月10日の最終審査会（都内）にオフライン参加できること（参加できない方は審査の対象外となります）</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNjDrPH-CTsuLzoVIkDL965WmLuCZPF3haMLQKglgtsdBk3Q/viewform"
+      target="_blank" rel="noopener" class="hero-cta reveal">Entry Now</a>
+    <p class="hero-note reveal">応募条件：パース制作ができること / 25歳以下であること（学生・社会人不問）/
+      5月10日の最終審査会（都内）にオフライン参加できること（参加できない方は審査の対象外となります）</p>
     <div class="hero-scroll">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5">
         <polyline points="6 9 12 15 18 9" />
@@ -1841,7 +1876,9 @@
         <div class="sponsor-placeholder">Your Logo</div>
       </div>
       <p class="reveal" style="font-size:12px; color:var(--light); margin-top:24px; letter-spacing:0.04em;">
-        協賛企業・団体を募集しています ─ <a href="https://docs.google.com/forms/d/e/1FAIpQLSfvnruKei5Dr8Is8Rf2NmAcxWHeYktJ-sDpelZdxW7I_yOH3g/viewform" target="_blank" rel="noopener" style="color:var(--accent);">お問い合わせ</a>
+        協賛企業・団体を募集しています ─ <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfvnruKei5Dr8Is8Rf2NmAcxWHeYktJ-sDpelZdxW7I_yOH3g/viewform"
+          target="_blank" rel="noopener" style="color:var(--accent);">お問い合わせ</a>
       </p>
     </div>
   </section>
@@ -1949,7 +1986,8 @@
     <p class="cta-sub reveal">
       応募締切：2026年5月2日（土）23:59 JST
     </p>
-    <a href="entry.html" class="hero-cta reveal">Entry Now</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNjDrPH-CTsuLzoVIkDL965WmLuCZPF3haMLQKglgtsdBk3Q/viewform"
+      target="_blank" rel="noopener" class="hero-cta reveal">Entry Now</a>
   </section>
 
   <!-- ============================== -->

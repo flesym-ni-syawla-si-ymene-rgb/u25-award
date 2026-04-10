@@ -41,13 +41,22 @@
       width: 216mm; height: 303mm;
       position: relative; overflow: hidden;
       page-break-after: always;
+      background: var(--white);
+      padding: var(--bleed);
     }
     .page:last-child {
       page-break-after: auto;
     }
 
+    /* Inner area (A4 trim size) */
+    .page-inner {
+      width: 100%; height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
     /* ===== PAGE 1 : FRONT ===== */
-    .page-front {
+    .page-front .page-inner {
       background: var(--dark);
       color: var(--white);
       display: grid;
@@ -61,8 +70,7 @@
       position: relative;
       display: flex; flex-direction: column;
       justify-content: center;
-      /* top/sides: bleed + content margin; bottom: content margin only */
-      padding: calc(var(--bleed) + 40px) calc(var(--bleed) + 48px) 28px;
+      padding: 40px 48px 28px;
       overflow: hidden;
     }
     .front-hero-bg {
@@ -114,7 +122,7 @@
     .front-bottom {
       position: relative; z-index: 1;
       background: rgba(0,0,0,0.5);
-      padding: 16px calc(var(--bleed) + 48px);
+      padding: 16px 48px;
       display: flex; justify-content: space-between;
       align-items: center; gap: 16px;
       border-top: 1px solid rgba(255,255,255,0.08);
@@ -146,7 +154,7 @@
     .front-overview {
       position: relative; z-index: 1;
       background: rgba(0,0,0,0.6);
-      padding: 14px calc(var(--bleed) + 48px) 18px;
+      padding: 14px 48px 18px;
       border-top: 1px solid rgba(255,255,255,0.08);
     }
     .front-overview-label {
@@ -182,7 +190,7 @@
     .accent-stripe {
       background: var(--accent);
       color: var(--black);
-      padding: 10px calc(var(--bleed) + 48px) calc(var(--bleed) + 10px);
+      padding: 10px 48px;
       display: flex; justify-content: center;
       align-items: center; gap: 32px;
       font-family: 'Inter', sans-serif;
@@ -197,7 +205,7 @@
     }
 
     /* ===== PAGE 2 : BACK ===== */
-    .page-back {
+    .page-back .page-inner {
       background: var(--white);
       color: var(--black);
       display: flex; flex-direction: column;
@@ -206,7 +214,7 @@
     /* Header bar — background bleeds top/left/right */
     .back-header {
       background: var(--dark); color: var(--white);
-      padding: calc(var(--bleed) + 20px) calc(var(--bleed) + 40px) 20px;
+      padding: 20px 40px;
       display: flex; justify-content: space-between;
       align-items: center;
     }
@@ -224,7 +232,7 @@
 
     .back-body {
       flex: 1;
-      padding: 26px calc(var(--bleed) + 40px) 20px;
+      padding: 26px 40px 20px;
       display: flex; flex-direction: column;
       gap: 20px;
     }
@@ -366,7 +374,7 @@
     /* Footer — background bleeds left/right/bottom */
     .back-footer {
       background: var(--dark); color: rgba(255,255,255,0.4);
-      padding: 12px calc(var(--bleed) + 40px) calc(var(--bleed) + 12px);
+      padding: 12px 40px;
       font-size: 9px; letter-spacing: 0.04em;
       display: flex; justify-content: space-between;
       align-items: center;
@@ -424,6 +432,7 @@
     <div class="mark bl-h"></div><div class="mark bl-v"></div>
     <div class="mark br-h"></div><div class="mark br-v"></div>
   </div>
+  <div class="page-inner">
 
   <div class="front-hero">
     <div class="front-hero-bg">
@@ -480,6 +489,8 @@
     <span>エントリー受付中</span>
     &#9654; flesym-ni-syawla-si-ymene-rgb.github.io/u25-award/
   </div>
+
+  </div><!-- /.page-inner -->
 </div>
 
 <!-- ==================== PAGE 2 : BACK ==================== -->
@@ -490,6 +501,7 @@
     <div class="mark bl-h"></div><div class="mark bl-v"></div>
     <div class="mark br-h"></div><div class="mark br-v"></div>
   </div>
+  <div class="page-inner">
 
   <div class="back-header">
     <p class="back-logo">U25 AI×3D Perspective Award 2026</p>
@@ -580,6 +592,8 @@
     <span>U25 AI×3D PERSPECTIVE AWARD 運営事務局 / murayama.dai.1@gmail.com</span>
     <span>&copy; 2026 U25 AI×3D Perspective Award</span>
   </div>
+
+  </div><!-- /.page-inner -->
 </div>
 
 </body>

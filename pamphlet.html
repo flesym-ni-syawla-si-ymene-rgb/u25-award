@@ -374,10 +374,15 @@
       color: rgba(255,255,255,0.4); text-decoration: none;
     }
 
+    /* ───── Screen: allow scroll ───── */
+    @media screen {
+      .page { overflow: visible; }
+    }
+
     /* ───── Print ───── */
     @media print {
       body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      .page { page-break-inside: avoid; }
+      .page { page-break-inside: avoid; overflow: hidden; }
     }
 
     /* ───── Trim marks (トンボ) ───── */

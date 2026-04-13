@@ -385,15 +385,7 @@
       .page { page-break-inside: avoid; overflow: hidden; }
     }
 
-    /* ───── Trim marks (トンボ) ───── */
-    .page::before,
-    .page::after {
-      content: '';
-      position: absolute;
-      z-index: 9999;
-      pointer-events: none;
-    }
-    /* Corner trim marks */
+    /* ───── Trim marks (トンボ) + 仕上がり線 ───── */
     .trim-marks {
       position: absolute;
       inset: 0;
@@ -402,20 +394,32 @@
     }
     .trim-marks .mark {
       position: absolute;
-      background: #000;
+      background: rgba(255,0,0,0.7);
     }
+    /* Corner trim marks — 長さ 8mm, 太さ 0.5pt */
     /* Top-left */
-    .trim-marks .tl-h { top: var(--bleed); left: 0; width: 2mm; height: 0.25pt; }
-    .trim-marks .tl-v { top: 0; left: var(--bleed); width: 0.25pt; height: 2mm; }
+    .trim-marks .tl-h { top: var(--bleed); left: 0; width: 8mm; height: 0.5pt; }
+    .trim-marks .tl-v { top: 0; left: var(--bleed); width: 0.5pt; height: 8mm; }
     /* Top-right */
-    .trim-marks .tr-h { top: var(--bleed); right: 0; width: 2mm; height: 0.25pt; }
-    .trim-marks .tr-v { top: 0; right: var(--bleed); width: 0.25pt; height: 2mm; }
+    .trim-marks .tr-h { top: var(--bleed); right: 0; width: 8mm; height: 0.5pt; }
+    .trim-marks .tr-v { top: 0; right: var(--bleed); width: 0.5pt; height: 8mm; }
     /* Bottom-left */
-    .trim-marks .bl-h { bottom: var(--bleed); left: 0; width: 2mm; height: 0.25pt; }
-    .trim-marks .bl-v { bottom: 0; left: var(--bleed); width: 0.25pt; height: 2mm; }
+    .trim-marks .bl-h { bottom: var(--bleed); left: 0; width: 8mm; height: 0.5pt; }
+    .trim-marks .bl-v { bottom: 0; left: var(--bleed); width: 0.5pt; height: 8mm; }
     /* Bottom-right */
-    .trim-marks .br-h { bottom: var(--bleed); right: 0; width: 2mm; height: 0.25pt; }
-    .trim-marks .br-v { bottom: 0; right: var(--bleed); width: 0.25pt; height: 2mm; }
+    .trim-marks .br-h { bottom: var(--bleed); right: 0; width: 8mm; height: 0.5pt; }
+    .trim-marks .br-v { bottom: 0; right: var(--bleed); width: 0.5pt; height: 8mm; }
+    /* 仕上がり線 (A4 trim boundary) */
+    .trim-border {
+      position: absolute;
+      top: var(--bleed);
+      left: var(--bleed);
+      right: var(--bleed);
+      bottom: var(--bleed);
+      border: 0.5pt dashed rgba(255,0,0,0.4);
+      z-index: 9998;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
@@ -428,6 +432,7 @@
     <div class="mark bl-h"></div><div class="mark bl-v"></div>
     <div class="mark br-h"></div><div class="mark br-v"></div>
   </div>
+  <div class="trim-border"></div>
   <div class="front-hero">
     <div class="front-hero-bg">
       <img src="images/pers-1.jpg" alt="">
@@ -494,6 +499,7 @@
     <div class="mark bl-h"></div><div class="mark bl-v"></div>
     <div class="mark br-h"></div><div class="mark br-v"></div>
   </div>
+  <div class="trim-border"></div>
   <div class="back-header">
     <p class="back-logo">U25 AI×3D Perspective Award 2026</p>
     <p class="back-header-label">Competition Details</p>

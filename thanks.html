@@ -1,101 +1,278 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-  <title>送信完了 | U25 AI×3D PERSPECTIVE AWARD 2026</title>
+  <title>U25 AI×3D PERSPECTIVE AWARD 2026 — 大会HP移転のお知らせ</title>
+  <meta name="description" content="U25 AI×3D PERSPECTIVE AWARD 2026 の大会HPは新しいページへ移転しました。">
+  <meta name="robots" content="noindex">
+
+  <meta http-equiv="refresh" content="5; url=https://fudosoken.co.jp/U25AI%C3%973DPERSPECTIVEAWARD/2026">
+  <link rel="canonical" href="https://fudosoken.co.jp/U25AI%C3%973DPERSPECTIVEAWARD/2026">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=Oswald:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp.min.css">
+
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     :root {
-      --black: #111; --gray: #666; --light: #999;
-      --border: #e0e0e0; --bg: #fafaf8; --white: #fff;
-      --accent: #2a5a3f;
+      --black: #0a0a0f;
+      --dark: #12121a;
+      --dark2: #1a1a24;
+      --light: #999;
+      --muted: #bbb;
+      --white: #fff;
+      --accent: #d4e600;
+      --accent-light: #e6ff00;
+      --accent-glow: rgba(230, 255, 0, 0.2);
+      --border-dark: rgba(255, 255, 255, 0.1);
     }
+
+    html,
     body {
-      background: var(--bg); color: var(--black);
-      font-family: 'Noto Sans JP', sans-serif;
-      -webkit-font-smoothing: antialiased; line-height: 1.8;
-      min-height: 100vh; display: flex; flex-direction: column;
-    }
-    .en { font-family: 'Inter', sans-serif; }
-    nav {
-      padding: 20px 40px; display: flex; justify-content: space-between; align-items: center;
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.15em; color: var(--black); text-decoration: none; text-transform: uppercase; }
-
-    main {
-      flex: 1; display: flex; flex-direction: column;
-      justify-content: center; align-items: center;
-      text-align: center; padding: 64px 24px;
+      height: 100%;
     }
 
-    .check-icon {
-      width: 64px; height: 64px; border: 2px solid var(--black);
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      margin-bottom: 32px;
-      animation: fadeIn 0.6s ease;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.8); }
-      to { opacity: 1; transform: scale(1); }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: YakuHanJP, 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.9;
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
     }
 
-    h1 { font-size: 24px; font-weight: 700; letter-spacing: 0.06em; margin-bottom: 16px; }
-    .message { font-size: 15px; color: var(--gray); letter-spacing: 0.04em; max-width: 480px; margin-bottom: 48px; }
-    .btn-back {
-      display: inline-block; padding: 14px 48px;
-      background: var(--black); color: var(--white);
-      font-family: 'Inter', sans-serif; font-weight: 600;
-      font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
-      text-decoration: none; transition: all 0.3s;
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(212, 230, 0, 0.08), transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(212, 230, 0, 0.05), transparent 50%);
+      pointer-events: none;
+      z-index: 0;
     }
-    .btn-back:hover { background: var(--accent); }
 
-    footer { border-top: 1px solid var(--border); padding: 24px; text-align: center; }
-    footer p { font-size: 11px; color: var(--light); letter-spacing: 0.06em; }
+    .en {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
+      width: 100%;
+      text-align: center;
+      padding: 56px 32px;
+      border: 1px solid var(--border-dark);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+      backdrop-filter: blur(8px);
+    }
+
+    .logo {
+      display: inline-block;
+      margin-bottom: 40px;
+    }
+
+    .logo img {
+      height: 96px;
+      width: 96px;
+      display: block;
+    }
+
+    .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      color: var(--accent);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .label::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: var(--accent);
+      vertical-align: middle;
+      margin-right: 12px;
+      margin-bottom: 3px;
+    }
+
+    .label::after {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: var(--accent);
+      vertical-align: middle;
+      margin-left: 12px;
+      margin-bottom: 3px;
+    }
+
+    h1 {
+      font-size: clamp(22px, 4vw, 30px);
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: 0.05em;
+      margin-bottom: 24px;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 2;
+      margin-bottom: 40px;
+    }
+
+    .lead strong {
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 36px;
+      background: var(--accent);
+      color: var(--black);
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border: 1px solid var(--accent);
+      transition: all 0.3s ease;
+      box-shadow: 0 0 24px var(--accent-glow);
+    }
+
+    .cta:hover {
+      background: var(--accent-light);
+      box-shadow: 0 0 40px var(--accent-glow);
+      transform: translateY(-1px);
+    }
+
+    .cta svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .countdown {
+      margin-top: 32px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: var(--light);
+      letter-spacing: 0.1em;
+    }
+
+    .countdown span {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .url-display {
+      margin-top: 28px;
+      padding: 14px 16px;
+      border: 1px solid var(--border-dark);
+      background: rgba(0, 0, 0, 0.3);
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      color: var(--muted);
+      word-break: break-all;
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 40px 20px;
+      }
+
+      .label::before,
+      .label::after {
+        width: 16px;
+      }
+
+      .cta {
+        padding: 16px 24px;
+        font-size: 12px;
+      }
+    }
   </style>
 </head>
+
 <body>
+  <main class="container">
+    <div class="logo">
+      <img src="images/favicon.svg" alt="U25 AI×3D PERSPECTIVE AWARD 2026">
+    </div>
 
-<nav>
-  <a href="index.html" class="nav-logo">U25 AI×3D Award</a>
-</nav>
+    <div class="label en">Notice</div>
 
-<main>
-  <div class="check-icon">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="20 6 9 17 4 12"/>
-    </svg>
-  </div>
+    <h1>大会HPはこちらに<br>変更になりました</h1>
 
-  <h1 id="title">送信が完了しました</h1>
-  <p class="message" id="message">
-    エントリーを受け付けました。<br>
-    ご登録いただいたメールアドレス宛に確認のご連絡をお送りします。<br>
-    応募締切は 2026年6月13日（土）23:59 JST です。
-  </p>
+    <p class="lead">
+      U25 AI×3D PERSPECTIVE AWARD 2026 の<br>
+      公式ページは下記URLへ移転しました。<br>
+      <strong>5秒後に自動で新しいページへ移動します。</strong>
+    </p>
 
-  <a href="index.html" class="btn-back">Back to Top</a>
-</main>
+    <a class="cta en" href="https://fudosoken.co.jp/U25AI%C3%973DPERSPECTIVEAWARD/2026">
+      新HPへ移動する
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="square" stroke-linejoin="miter">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
 
-<footer>
-  <p>&copy; 2026 U25 AI×3D Perspective Award. All Rights Reserved.</p>
-</footer>
+    <div class="countdown">
+      <span id="counter">5</span> 秒後に自動遷移
+    </div>
 
-<script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get('type') === 'sponsor') {
-    document.getElementById('title').textContent = 'お問い合わせを受け付けました';
-    document.getElementById('message').innerHTML =
-      '協賛に関するお問い合わせありがとうございます。<br>' +
-      '担当者より2〜3営業日以内にご連絡いたします。';
-  }
-</script>
+    <div class="url-display">
+      https://fudosoken.co.jp/U25AI×3DPERSPECTIVEAWARD/2026
+    </div>
+  </main>
 
+  <script>
+    (function () {
+      var seconds = 5;
+      var counter = document.getElementById('counter');
+      var target = 'https://fudosoken.co.jp/U25AI%C3%973DPERSPECTIVEAWARD/2026';
+      var timer = setInterval(function () {
+        seconds -= 1;
+        if (counter) counter.textContent = seconds;
+        if (seconds <= 0) {
+          clearInterval(timer);
+          window.location.replace(target);
+        }
+      }, 1000);
+    })();
+  </script>
 </body>
+
 </html>

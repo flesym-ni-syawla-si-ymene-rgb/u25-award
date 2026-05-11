@@ -1,273 +1,278 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-  <title>ENTRY | U25 AI×3D PERSPECTIVE AWARD 2026</title>
+  <title>U25 AI×3D PERSPECTIVE AWARD 2026 — 大会HP移転のお知らせ</title>
+  <meta name="description" content="U25 AI×3D PERSPECTIVE AWARD 2026 の大会HPは新しいページへ移転しました。">
+  <meta name="robots" content="noindex">
+
+  <meta http-equiv="refresh" content="5; url=https://fudosoken.co.jp/U25AI%C3%973DPERSPECTIVEAWARD/2026">
+  <link rel="canonical" href="https://fudosoken.co.jp/U25AI%C3%973DPERSPECTIVEAWARD/2026">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=Oswald:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp.min.css">
+
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     :root {
       --black: #0a0a0f;
       --dark: #12121a;
-      --gray: #666;
+      --dark2: #1a1a24;
       --light: #999;
-      --border: #e0e0e0;
-      --bg: #fafafa;
+      --muted: #bbb;
       --white: #fff;
       --accent: #d4e600;
       --accent-light: #e6ff00;
       --accent-glow: rgba(230, 255, 0, 0.2);
+      --border-dark: rgba(255, 255, 255, 0.1);
     }
+
+    html,
     body {
-      background: var(--bg);
-      color: var(--black);
-      font-family: 'Noto Sans JP', sans-serif;
+      height: 100%;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: YakuHanJP, 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
       -webkit-font-smoothing: antialiased;
-      line-height: 1.8;
-      min-height: 100vh;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.9;
+      font-size: 15px;
+      letter-spacing: 0.04em;
       display: flex;
-      flex-direction: column;
-    }
-    .en { font-family: 'Inter', sans-serif; }
-
-    nav {
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid var(--border);
+      justify-content: center;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
     }
-    .nav-logo {
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(212, 230, 0, 0.08), transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(212, 230, 0, 0.05), transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .en {
       font-family: 'Inter', sans-serif;
-      font-weight: 700;
-      font-size: 13px;
-      letter-spacing: 0.15em;
-      color: var(--black);
-      text-decoration: none;
-      text-transform: uppercase;
     }
-    nav a.back {
-      font-size: 12px;
-      color: var(--gray);
-      text-decoration: none;
-    }
-    nav a.back:hover { color: var(--black); }
 
-    main {
-      flex: 1;
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 80px 24px 64px;
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
       width: 100%;
+      text-align: center;
+      padding: 56px 32px;
+      border: 1px solid var(--border-dark);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+      backdrop-filter: blur(8px);
     }
 
-    .eyebrow {
+    .logo {
+      display: inline-block;
+      margin-bottom: 40px;
+    }
+
+    .logo img {
+      height: 96px;
+      width: 96px;
+      display: block;
+    }
+
+    .label {
       font-family: 'Inter', sans-serif;
       font-size: 11px;
       font-weight: 600;
       letter-spacing: 0.3em;
+      color: var(--accent);
+      margin-bottom: 20px;
       text-transform: uppercase;
-      color: var(--gray);
-      margin-bottom: 18px;
     }
+
+    .label::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: var(--accent);
+      vertical-align: middle;
+      margin-right: 12px;
+      margin-bottom: 3px;
+    }
+
+    .label::after {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: var(--accent);
+      vertical-align: middle;
+      margin-left: 12px;
+      margin-bottom: 3px;
+    }
+
     h1 {
-      font-size: 36px;
+      font-size: clamp(22px, 4vw, 30px);
       font-weight: 700;
-      letter-spacing: 0.02em;
-      line-height: 1.3;
+      line-height: 1.5;
+      letter-spacing: 0.05em;
       margin-bottom: 24px;
-      color: var(--black);
     }
+
     .lead {
-      font-size: 15px;
-      color: var(--gray);
+      color: var(--muted);
+      font-size: 14px;
       line-height: 2;
       margin-bottom: 40px;
     }
 
-    .info-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 32px;
-      margin-bottom: 32px;
-    }
-    .info-card h2 {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      background: var(--dark);
-      display: inline-block;
-      padding: 6px 14px;
-      border-radius: 4px;
-      margin-bottom: 18px;
-    }
-    .info-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .info-table th {
-      width: 100px;
-      text-align: left;
-      vertical-align: top;
-      padding: 10px 16px 10px 0;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--black);
-      border-bottom: 1px solid #f0f0f0;
-    }
-    .info-table td {
-      padding: 10px 0;
-      font-size: 13px;
-      color: var(--gray);
-      border-bottom: 1px solid #f0f0f0;
-      line-height: 1.7;
-    }
-    .info-table tr:last-child th,
-    .info-table tr:last-child td { border-bottom: none; }
-
-    .deadline-notice {
-      background: #fff8d6;
-      border-left: 4px solid #d4a300;
-      padding: 18px 22px;
-      border-radius: 6px;
-      margin-bottom: 32px;
-    }
-    .deadline-notice strong {
-      display: block;
-      font-size: 13px;
-      color: #8a6a00;
-      margin-bottom: 6px;
-      letter-spacing: 0.04em;
-    }
-    .deadline-notice p {
-      font-size: 13px;
-      color: #5a4500;
-      line-height: 1.7;
+    .lead strong {
+      color: var(--white);
+      font-weight: 500;
     }
 
-    .cta-btn {
+    .cta {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 18px 48px;
-      background: var(--dark);
-      color: var(--accent);
-      border: 1px solid var(--dark);
+      gap: 12px;
+      padding: 18px 36px;
+      background: var(--accent);
+      color: var(--black);
       font-family: 'Inter', sans-serif;
-      font-size: 13px;
       font-weight: 700;
-      letter-spacing: 0.18em;
+      font-size: 13px;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: all 0.3s;
+      border: 1px solid var(--accent);
+      transition: all 0.3s ease;
+      box-shadow: 0 0 24px var(--accent-glow);
     }
-    .cta-btn:hover {
-      background: var(--black);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+
+    .cta:hover {
+      background: var(--accent-light);
+      box-shadow: 0 0 40px var(--accent-glow);
       transform: translateY(-1px);
     }
-    .cta-wrap {
-      text-align: center;
-      margin-top: 12px;
+
+    .cta svg {
+      width: 14px;
+      height: 14px;
     }
 
-    .notes {
-      margin-top: 40px;
+    .countdown {
+      margin-top: 32px;
+      font-family: 'Inter', sans-serif;
       font-size: 12px;
       color: var(--light);
-      line-height: 1.9;
-    }
-    .notes ul {
-      padding-left: 18px;
-      margin-top: 8px;
+      letter-spacing: 0.1em;
     }
 
-    footer {
-      background: var(--dark);
-      color: rgba(255, 255, 255, 0.4);
-      padding: 24px 40px;
+    .countdown span {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .url-display {
+      margin-top: 28px;
+      padding: 14px 16px;
+      border: 1px solid var(--border-dark);
+      background: rgba(0, 0, 0, 0.3);
+      font-family: 'Inter', sans-serif;
       font-size: 11px;
-      text-align: center;
+      color: var(--muted);
+      word-break: break-all;
+      letter-spacing: 0.02em;
     }
 
-    @media (max-width: 600px) {
-      main { padding: 48px 20px; }
-      h1 { font-size: 26px; }
-      .info-card { padding: 24px 20px; }
-      .info-table th { width: 80px; font-size: 11px; }
-      .info-table td { font-size: 12px; }
-      .cta-btn { padding: 16px 32px; font-size: 12px; width: 100%; }
+    @media (max-width: 480px) {
+      .container {
+        padding: 40px 20px;
+      }
+
+      .label::before,
+      .label::after {
+        width: 16px;
+      }
+
+      .cta {
+        padding: 16px 24px;
+        font-size: 12px;
+      }
     }
   </style>
 </head>
-<body>
-  <nav>
-    <a href="index.html" class="nav-logo">U25 AI×3D Award</a>
-    <a href="index.html" class="back">← トップへ戻る</a>
-  </nav>
 
-  <main>
-    <p class="eyebrow">Competition Entry</p>
-    <h1>U25 AI×3D PERSPECTIVE AWARD<br>応募エントリー</h1>
+<body>
+  <main class="container">
+    <div class="logo">
+      <img src="images/favicon.svg" alt="U25 AI×3D PERSPECTIVE AWARD 2026">
+    </div>
+
+    <div class="label en">Notice</div>
+
+    <h1>大会HPはこちらに<br>変更になりました</h1>
+
     <p class="lead">
-      U-25のクリエイターによる、AI × 3Dパースの次世代オフィスコンペティションへのエントリーを受け付けています。あなたが描く「働きたいオフィス」を見せてください。
+      U25 AI×3D PERSPECTIVE AWARD 2026 の<br>
+      公式ページは下記URLへ移転しました。<br>
+      <strong>5秒後に自動で新しいページへ移動します。</strong>
     </p>
 
-    <div class="info-card">
-      <h2>Entry Info</h2>
-      <table class="info-table">
-        <tr>
-          <th>応募資格</th>
-          <td>25歳以下（2026年6月13日時点）／ パース制作ができる方<br>個人またはチーム（最大3名・全員25歳以下）</td>
-        </tr>
-        <tr>
-          <th>提出物</th>
-          <td>3Dパース 4カット以内 ＋ 平面図1枚 ／ プロセスシート1枚</td>
-        </tr>
-        <tr>
-          <th>参加費</th>
-          <td>無料</td>
-        </tr>
-        <tr>
-          <th>賞金総額</th>
-          <td>150万円（最優秀賞 100万円 ／ 優秀賞 各15万円 ／ 審査員特別賞 各5万円）</td>
-        </tr>
-      </table>
+    <a class="cta en" href="https://fudosoken.co.jp/U25AI%C3%973DPERSPECTIVEAWARD/2026">
+      新HPへ移動する
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="square" stroke-linejoin="miter">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
+
+    <div class="countdown">
+      <span id="counter">5</span> 秒後に自動遷移
     </div>
 
-    <div class="deadline-notice">
-      <strong>⚠ 応募締切</strong>
-      <p>エントリーの応募期限は <strong>2026年6月13日（土）23:59 JST</strong> までです。締切後の応募は受け付けません。締切までであれば、作品の差し替え・更新が可能です。</p>
-    </div>
-
-    <div class="cta-wrap">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNjDrPH-CTsuLzoVIkDL965WmLuCZPF3haMLQKglgtsdBk3Q/viewform" target="_blank" rel="noopener" class="cta-btn">
-        エントリーフォームへ →
-      </a>
-    </div>
-
-    <div class="notes">
-      <p><strong>応募にあたっての注意事項</strong></p>
-      <ul>
-        <li>6月20日（土）の最終公開審査会（都内会場）にオフライン参加できることが必須条件です。参加できない方は審査の対象外となります。</li>
-        <li>会場までの交通費・宿泊費等の補助は一切行いません。</li>
-        <li>1次審査を経て、ファイナリスト計6組を選出します（6月15日午後発表）。</li>
-        <li>応募作品の著作権は応募者に帰属します。詳細は <a href="terms.html" style="color:var(--gray); text-decoration:underline;">応募規約</a> をご確認ください。</li>
-      </ul>
+    <div class="url-display">
+      https://fudosoken.co.jp/U25AI×3DPERSPECTIVEAWARD/2026
     </div>
   </main>
 
-  <footer>
-    © 2026 株式会社不動産総合研究所内 U25 AI×3D PERSPECTIVE AWARD 2026 運営事務局 / murayama.dai.1@gmail.com
-  </footer>
+  <script>
+    (function () {
+      var seconds = 5;
+      var counter = document.getElementById('counter');
+      var target = 'https://fudosoken.co.jp/U25AI%C3%973DPERSPECTIVEAWARD/2026';
+      var timer = setInterval(function () {
+        seconds -= 1;
+        if (counter) counter.textContent = seconds;
+        if (seconds <= 0) {
+          clearInterval(timer);
+          window.location.replace(target);
+        }
+      }, 1000);
+    })();
+  </script>
 </body>
+
 </html>
